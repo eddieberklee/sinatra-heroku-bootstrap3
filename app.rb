@@ -17,7 +17,7 @@ get '/' do
   haml :index
 end
 
-get '/css/:name.css' do
+get '/css/:name.sass.css' do
   content_type 'text/css', :charset => 'utf-8'
   sass(:"../public/css/#{params[:name]}", Compass.sass_engine_options )
 end
