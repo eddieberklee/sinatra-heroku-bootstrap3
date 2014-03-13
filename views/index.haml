@@ -1,0 +1,59 @@
+!!! 5
+%html
+	%head
+		%title= "Index"
+		%meta{ :content => "", :name => "description" }
+		%meta{ :content => "", :name => "author" }
+		%meta{ :content => "3 days", :name => "revisit-after" }
+		%link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
+		%link{ :href => "/feed", :rel => "alternate", :title => "Atom", :type => "application/atom+xml" }
+		%link{ :href => "/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet" }
+		%link{ :href => "/css/docs.min.css", :media => "screen", :rel => "stylesheet" }
+		%link{ :href => "/css/style.css", :media => "screen", :rel => "stylesheet" }
+		%link{ :href => "/css/screen.css", :media => "screen", :rel => "stylesheet" }
+	%body
+		.container
+
+			.bs-callout.bs-callout-info
+				%h4
+					Don't mix with other components
+				%p
+					Icon classes cannot be directly combined with other components. They should not be used along with other classes on the same element. Instead, add a nested.
+
+			%header
+				%nav
+					%ul
+						%li= "About"
+						%li= "Queue"
+						%li= "Share"
+			%section
+				%article
+					%header
+						
+						%h2= "Great App"
+						
+						%input{ :type => "text", :class => "form-control", :placeholder => "Text Input", }
+						
+						%button{ :type => "button", :class => "btn btn-warning", }
+							Love & Pain
+						
+						%button{ :style => "background-color:orange;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;border:0;margin:2px;" }
+							%span{ :class => "glyphicon glyphicon-inbox", :style => "color:white;font-size:1.3em;position:relative;top:3px;left:1px;", }
+
+						.btn-group
+							%button{ :type => "button", :class => "btn btn-success dropdown-toggle", "data-toggle" => "dropdown", }
+								Action
+							%ul.dropdown-menu{ :role => "menu", }
+								%li
+									%a{ :href => "#", }
+										Something
+			%footer
+				%p
+					Copyright 2011 My Name
+
+			%script{ :src => "/js/jquery-1.10.2.min.js" }
+			%script{ :src => "/js/bootstrap.min.js" }
+
+
+
+

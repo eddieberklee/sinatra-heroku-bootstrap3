@@ -1,2 +1,4 @@
-sinatra-heroku-bootstrap3
-=========================
+spoonrocket-notify
+==================
+
+Notify me when spoonrocket has food for me again.
