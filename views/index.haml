@@ -5,6 +5,8 @@
 		%meta{ :content => "", :name => "description" }
 		%meta{ :content => "", :name => "author" }
 		%meta{ :content => "3 days", :name => "revisit-after" }
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1"}
+
 		%link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
 		%link{ :href => "/feed", :rel => "alternate", :title => "Atom", :type => "application/atom+xml" }
 		%link{ :href => "/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet" }
@@ -29,10 +31,57 @@
 			%section
 				%article
 					%header
+
+						.alert.alert-success
+							You's a WINNER!
+
+						%ol.breadcrumb
+							%li
+								%a{ :href => "#" }
+									Home
+							%li
+								%a{ :href => "#" }
+									Library
+							%li{ :class => "active", }
+								Data
+
+						%button.btn.btn-info.btn-lg{ "data-toggle" => "modal", "data-target" => "#myModal" }
+							Launch Demo Modal
+
+						%br
+						%br
+
+						.modal.fade{ :id => "myModal", :tabindex => "-1", :role => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+							.modal-dialog
+								.modal-content
+									.modal-header
+										%button{ :type => "button", :class => "close", "data-dismiss" => "modal", "aria-hidden" => "true", :style => "background-color:#ccc;width:32px;height:32px;border-radius:16px;" }
+											%span{ :style => "position:relative;top:-2px;color:#222" }
+												&times;
+										%h4.modal-title#myModalLabel
+											Modal Title
+									.modal-body
+										%button{ :type => "button", :class => "btn btn-default", "data-dismiss" => "modal" }
+											Close
+
+						.progress
+							.progress-bar.progress-bar-success{ :role => "progressbar", "aria-valuenow" => "40", "aria-valuemin" => "0", "aria-valuemax" => "100", :style => "width: 40%" }
+							%span.sr-only
+								40% Complete
+
+						.panel.panel-info
+							.panel-heading
+								%h3.panel-title
+									Panel Title
+							.panel-body
+								Panel content.
+
+						%span.label.label-danger
+							Beep!
 						
-						%h2= "Great App"
+						%h2= "SpoonRocket Notifier"
 						
-						%input{ :type => "text", :class => "form-control", :placeholder => "Text Input", }
+						%input{ :type => "text", :class => "form-control col6", :placeholder => "Enter your email..", }
 						
 						%button{ :type => "button", :class => "btn btn-warning", }
 							Love & Pain
